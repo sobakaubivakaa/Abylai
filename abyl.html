@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-rows-columns: repeat(4,1fr);
+            border: solid black;
+            grid-gap: 10px;
+            width: 100%;
+            height: 100%;
+        }
+        .header{
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            border: solid black;
+
+        }
+        .hBar{
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            border: solid black;
+        }
+        .Main{
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            border: solid black;
+        }
+        .Footer{
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 4;
+            grid-row-end: 4;
+            border: solid black;
+        }
+    </style>
+</head>
+<body bgcolor="#778899">
+<div class="header">Header</div>
+<div class="hBar">H-bar</div>
+<div class="Main">
+    <form style="display: inline-block">
+        <table style="padding-left: 200px ; padding-top:">
+            <tr>
+                <td style="border: solid black"><em>Name:</em></td>
+                <td>Abylaikhan</td>
+            </tr>
+            <tr>
+                <td><em>Surname:</em></td>
+                <td style="border: solid black">Abdraman</td>
+            </tr>
+            <tr>
+                <td style="border: solid black"><em>Email:</em></td>
+                <td>212075@astanait.edu.kz</td>
+            </tr>
+        </table>
+    </form>
+    <a href="https://t.me/shumjoo"    target="_blank"><img style="width: 75px;height: 75px; margin-left: 370px" src="data:image/jpeg;base64,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" alt="link to the telegram"></a>
+    <h3>Facts about me:</h3>
+    <ul>
+        <li>I'm 17 years old</li>
+    </ul>
+    <ul>
+        <li>I have scammed people</li>
+    </ul>
+</div>
+<div class="Footer">Email:sobakaubivakaa@mail.ru</div>
+</body>
+</html>
