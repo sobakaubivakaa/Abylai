@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset=utf-8 />
+<title></title>
+<style type="text/css">
+body {margin: 30px;}
+</style> 
+<script src="pracrise.js"></script>
+    <script src="pracrice.js"></script>
+</head>
+<body>
+<center>Practice</center>
+<br>	
+<h4>If we imagine that i will graduate from AITU in (2024.07.04) in 19:00</h4>
+        <button style="display: block" id="vis" onclick="calculate()">Calculate how many time i have for learning</button>
+        <input type="text" id="time" style="display: none;width: 500px">
+        <br><br><br>
+<form>
+1st Number : <input type="text" id="FN" /><br>
+2nd Number: <input type="text" id="SN" /><br>
+<input type="button" onClick="multiplyBy()" Value="Multiply" />
+<input type="button" onClick="divideBy()" Value="Divide" />
+</form>
+<p>The Result is : <br>
+<span id = "result"></span>
+</p>
+</body>
+<script>
+		document.write("Name and group : Abdraman Abylaikhan" + " "+ "CS2121")
+</script>
+<br>
+<script>
+	let date =  new Date().getFullYear();
+    document.write("Year :" + " " + date);
+</script>
+<br>
+<script>
+var myDate = new Date();
+        var myDay = myDate.getDay();
+        var weekday = ['Sunday', 'Monday', 'Tuesday',
+            'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        document.write("Today is : " + weekday[myDay]);
+        
+</script>
+<br>
+<script>
+	const d = new Date();
+    let day = d.getDay();
+    document.write("Current date : " + " " + d);
+    
+</script>
+<br>
+<script>
+	const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"]
+const dateObj = new Date()
+const monthNumber = dateObj.getMonth()
+const monthName = monthNames[monthNumber]
+document.write("Month:" + " " + monthName)
+</script>
+
+<br>
+<script>
+var today = new Date();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+document.write("Current time is :" + " " + time);
+	</script>
+<br>
+
+<br>
+</html>
