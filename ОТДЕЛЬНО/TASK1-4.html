@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle Password Visibility</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sign In</h1>
+        <form method="post">
+            <p>
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username">
+            </p>
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" />
+                <i class="bi bi-eye-slash" id="togglePassword"></i>
+            </p>
+<input id="accept" name="accept" type="checkbox" value="y"/>Sure?<br>  
+<input id="submitbtn" disabled="disabled" name="Submit" type="submit" value="Submit" />
+        </form>
+    </div>
+    <br><br>
+    <button onclick="scrollToTop()">
+      Click to scroll to top
+  </button>
+  <br><br>
+  <div class="box"></div>
+    <h3><button type="button">Set Background Image</button></h3>
+    <script>
+        const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#password");
+
+        togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            
+            // toggle the icon
+            this.classList.toggle("bi-eye");
+        });
+
+        // prevent form submit
+        const form = document.querySelector("form");
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+
+$('#accept').click(function() {
+    if ($('#submitbtn').is(':disabled')) {
+        $('#submitbtn').removeAttr('disabled');
+    } else {
+        $('#submitbtn').attr('disabled', 'disabled');
+    }
+});
+
+function scrollToTop() {
+            $(window).scrollTop(0);
+        }
+
+        $(document).ready(function(){
+    // Set background image of a div on click of the button
+    $("button").click(function(){
+        var imageUrl = "https://avatars.mds.yandex.net/get-kinopoisk-post-img/1101693/02c0a6b52cb8d571de2ac90607700c7e/960x540";
+        $(".box").css("background-image", "url(" + imageUrl + ")");
+    });    
+});
+    </script>
+</body>
+<style>
+    .box{
+        width: 900px;
+        height: 500px;
+        border: 5px solid #333;
+    }
+</style>
+
+</html>
